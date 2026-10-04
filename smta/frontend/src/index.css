@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-base text-ink font-sans antialiased;
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(108,108,245,0.10), transparent 40%),
+    radial-gradient(circle at 85% 10%, rgba(51,214,232,0.06), transparent 35%);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #232A42;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2E3656;
+}
+
+.font-display {
+  letter-spacing: -0.01em;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #12172A 0%, #1B2140 50%, #12172A 100%);
+  background-size: 800px 100%;
+  @apply animate-shimmer rounded-lg;
+}
+
+.card {
+  @apply bg-surface border border-surface-border rounded-xl2 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset];
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
